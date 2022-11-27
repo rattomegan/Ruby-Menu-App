@@ -13,10 +13,10 @@ class SecretMenuItemsController < ApplicationController
         @secretMenuItem = SecretMenuItem.create(
             menu_name: params[:menu_name],
             restaurant_name: params[:restaurant_name],
-            menu_descritpion: params[:menu_description]
+            menu_description: params[:menu_description]
         )
         render json: @secretMenuItem
-    end
+    end 
 
     def update
         @secretMenuItem = SecretMenuItem.find(params[:id])
