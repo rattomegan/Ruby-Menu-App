@@ -5,8 +5,8 @@ class SecretMenuItemsController < ApplicationController
     end
 
     def show
-        @secretMeuItem = SecretMenuItem.find(params[:id])
-        render json: @secretMeuItem
+        @secretMenuItem = SecretMenuItem.find(params[:id])
+        render json: @secretMenuItem
     end
 
     def create
@@ -21,8 +21,8 @@ class SecretMenuItemsController < ApplicationController
     def update
         @secretMenuItem = SecretMenuItem.find(params[:id])
         @secretMenuItem.update(
-            menu_name: params[:menu_name]
-            restaurant_name: params[:restaurant_name]
+            menu_name: params[:menu_name],
+            restaurant_name: params[:restaurant_name],
             menu_description: params[:menu_description]
         )
         render json: @secretMenuItem
